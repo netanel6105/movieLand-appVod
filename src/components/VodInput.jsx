@@ -5,7 +5,7 @@ function VodInput() {
     <div>
       <div className="flex flex-row">
         <h1>VodApp</h1>
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" className="form-control  w-25 mx-2"/>
       </div>
 
       
