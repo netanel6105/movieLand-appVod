@@ -5,12 +5,13 @@ import Layout from '../layout/layout';
 const AppRouters = () => {
 
   return (
+
     <Router>
       <Routes>
 
         <Route path='/' element={<Layout/>} />
 
-
+            
 
         {/* Not Found */}
         <Route path='/*' element={<h1>Not Found 404</h1>} />
