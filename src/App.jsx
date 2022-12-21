@@ -1,6 +1,7 @@
 
 import './App.css';
-import Layout from './layout/layout';
+
+import AppRouters from './routers/appRouters';
 // import Footer from './components/Footer';
 // import VodInput from './components/VodInput';
 // import VodList from './components/VodList';
@@ -10,7 +11,7 @@ function App() {
   return (
    
     <div>
-      <Layout/>
+     <AppRouters/>
      {/* <VodInput/>
      <VodStrip/>
      <VodList/>
