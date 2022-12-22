@@ -6,15 +6,15 @@ import { Carousel } from 'react-responsive-carousel';
 const Header = () => {
     return (
 
-        <div>
+        <div className='top '>
             <NavBar />
             <Carousel>
                 <div>
-                    <img src="../image/red.jpg" />
+                    <img src="../image/red.jpg"/>
                     <p className="legend">Legend 1</p>
                 </div>
                 <div>
-                    <img src="../image/fast-and-forious.jpg" />
+                    <img src="../image/fast-and-forious.jpg"  />
                     <p className="legend">Legend 2</p>
                 </div>
                 <div>
