@@ -11,15 +11,17 @@ const NavBar = () => {
         <div>
             <div className="container-fluid bg-dark p-2">
 
-                <div className='navTop container bg-dark '>
+                <div className='container-md  bg-dark'>
+                    <div className="row">
                     <nav class="navbar navbar-light  justify-content-between">
                         <Link  class="navbar-brand" to={"#"}> <h3 className='bg-warning my-2 p-1 ' >MARICA.TV</h3> </Link>
 
                         <form class="form-inline d-flex">
                             <input  onKeyDown={(e) =>{  if(e.key === "Enter"){ nav("/" + inputRef.current.value)}}} ref={inputRef} class=" form-control  mr-sm-2" type="search" placeholder="Search..." aria-label="Search" />
-                            <button onClick={()=> nav(inputRef.current.value)} class="btn btn-warning  my-1 mx-0 my-sm-0" type="submit">Search</button>
+                            <button onClick={()=> nav(inputRef.current.value)} class="btn btn-warning bg-warning  my-1 mx-0 my-sm-0" type="submit">Search</button>
                         </form>
                     </nav>
+                    </div>
                 </div>
 
 
