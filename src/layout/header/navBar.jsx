@@ -11,9 +11,9 @@ const NavBar = () => {
         <div>
             <div className="navTop container-fluid bg-dark p-2">
 
-                <div className='container-md  bg-dark'>
+                <div className='container-md'>
                     <div className="row">
-                    <nav class="navbar navbar-light  justify-content-between">
+                    <nav class="bg-dark navbar navbar-light  justify-content-between">
                         <Link  class="navbar-brand" to={"#"}> <h3 className='bg-warning my-2 p-1 ' >MARICA.TV</h3> </Link>
 
                         <form class="form-inline d-flex">

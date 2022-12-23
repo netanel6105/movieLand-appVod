@@ -8,13 +8,20 @@ const AppRouters = () => {
 
     <Router>
       <Routes>
+        <Route path='/' element={<Layout/>}>
 
-        <Route path='/' element={<Layout/>} />
 
-            
+
+
 
         {/* Not Found */}
         <Route path='/*' element={<h1>Not Found 404</h1>} />
+
+        </Route>
+        
+
+            
+
       </Routes>
 
 

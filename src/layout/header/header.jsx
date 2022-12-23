@@ -3,10 +3,24 @@ import NavBar from './navBar'
 
 
 const Header = () => {
+
+
+    
     return (
 
         <div className='top '>
+
+
+          
+
+
             <NavBar />
+
+
+
+
+
+
 
 
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
