@@ -9,7 +9,7 @@ const NavBar = () => {
     
     return (
         <div>
-            <div className="container-fluid bg-dark p-2">
+            <div className="navTop container-fluid bg-dark p-2">
 
                 <div className='container-md  bg-dark'>
                     <div className="row">
