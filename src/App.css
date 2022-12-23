@@ -1,4 +1,52 @@
-.bg-carousel1{
+* {
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-color: #000000;
+}
+
+/* in navBar.jsx - link h3*/
+.nameApp {
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #000000;
+    border-radius: 10px;
+    background-color: #CE930A;
+}
+
+.top-carousel{
+    overflow: hidden;
+}
+
+
+
+/*in navBar.jsx*/
+.navTop {
+    background: rgba(0, 0, 0, 0.807);
+
+}
+
+/*in navBar.jsx*/
+.bot-1 {
+    background-color: #CE930A;
+    border-radius: 1%;
+    height: 40px;
+
+}
+
+/*in navBar.jsx*/
+.inp-1 {
+    border-radius: 1%;
+
+    height: 40px;
+}
+
+
+
+
+/* all bg-carousel places in header.jsx*/
+.bg-carousel1 {
     min-height: 500px;
     background-size: cover;
     background-position: center;
@@ -6,19 +54,20 @@
     
     background-image: url(https://t4.ftcdn.net/jpg/04/51/91/07/360_F_451910724_zReyP0xzZQqQEN5aEDusqalwEsOX9HWS.jpg);
 }
-.bg-carousel2{
+
+.bg-carousel2 {
     min-height: 500px;
     background-size: cover;
     background-position: center;
-    
+
     background-size: 100% 100%;
     background-image: url(https://149837734.v2.pressablecdn.com/wp-content/uploads/2022/02/Fast-and-Furious-Movies-in-Order.jpg);
 }
-.bg-carousel3{
+
+.bg-carousel3 {
     min-height: 500px;
     background-size: cover;
     background-position: center;
     background-size: 100% 100%;
     background-image: url(https://i.ytimg.com/vi/fEE4RO-_jug/maxresdefault.jpg);
 }
-
