@@ -75,3 +75,12 @@ background-color:  #fcb500dd ;
 .topYear{
     color: #000000;
 }
+
+.imageList{
+   width: 80%;
+   height: 100%;
+}
+.vod-list{
+    display: flex;
+    justify-content: space-around;
+}
