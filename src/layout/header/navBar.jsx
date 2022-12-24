@@ -14,7 +14,7 @@ const NavBar = () => {
                 <div className='container-md'>
                     <div className="row">
                         <nav class="navbar navbar-light  justify-content-between">
-                            <Link class="navbar-brand" to={"#"}> <h3 className='nameApp  my-2 p-1 ' >VECTOR.TV</h3> </Link>
+                            <Link class="navbar-brand" to={"/"}> <h3 className='nameApp  my-2 p-1 ' >VECTOR.TV</h3> </Link>
 
                             <form class="form-inline d-flex">
                                 <input onKeyDown={(e) => { if (e.key === "Enter") { nav("/" + inputRef.current.value) } }} ref={inputRef} class="inp-1 form-control  mr-sm-2" type="search" placeholder="Search..." aria-label="Search" />
