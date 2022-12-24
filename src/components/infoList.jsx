@@ -28,15 +28,15 @@ const InfoList = () => {
         <div>
             {loading ? <h1>Loading...</h1> :
                 <div>
-                    <p>{data.Actors}</p>
-                    <p>{data.Country}</p>
-                    <p>{data.DVD}</p>
-                    <p>{data.Director}</p>
-                    <p>{data.Genre}</p>
-                    <p>{data.Language}</p>
-                    <p>{data.Plot}</p>
-                    <p>{data.Title}</p>
-                    <p>{data.Writer}</p>
+                    <p>{info.Actors}</p>
+                    <p>{info.Country}</p>
+                    <p>{info.DVD}</p>
+                    <p>{info.Director}</p>
+                    <p>{info.Genre}</p>
+                    <p>{info.Language}</p>
+                    <p>{info.Plot}</p>
+                    <p>{info.Title}</p>
+                    <p>{info.Writer}</p>
                 </div>
             }
         </div>

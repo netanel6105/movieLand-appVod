@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../components/home';
+import InfoList from '../components/infoList';
+import VodList from '../components/vodList';
 
 import Layout from '../layout/layout';
 const AppRouters = () => {
@@ -11,9 +13,10 @@ const AppRouters = () => {
       <Routes>
         <Route path='/' element={<Layout/>}>
 
-          <Route path='/' element={<Home/>} />
-
-
+        <Route index element={<Home/>}/>
+        <Route path='/:search' element={<Home/>}/>
+        <Route path='/vodList' element={<VodList/>}/>
+        <Route path='/infoList/:id' element={<InfoList/>}/>
 
         {/* Not Found */}
         <Route path='/*' element={<h1>Not Found 404</h1>} />
