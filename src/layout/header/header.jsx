@@ -1,4 +1,5 @@
 import React from 'react'
+import SelectYear from '../../components/selectYear'
 import NavBar from './navBar'
 
 
@@ -39,7 +40,8 @@ const Header = () => {
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-                
+
+                <SelectYear/>
 
         </div>
     )
