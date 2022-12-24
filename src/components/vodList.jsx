@@ -4,7 +4,7 @@ const VodList = (props) => {
     let item = props.item
     return (
        
-                <div className='vod-list mt-4 col-lg-3 col-md-4 col-12'>
+                <div className='vod-list mt-4 mb-3 col-lg-3 col-md-4 col-12'>
                    <Link to={'/InfoList/' + item.imdbID}>
                     <img src={item.Poster} className="imageList " alt="" />
                     </Link>
