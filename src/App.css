@@ -4,7 +4,7 @@
 
 body{
     
-    background-color: #000000;
+    background-color: #000000dc;
     color: aliceblue;
 }
 
@@ -36,33 +36,38 @@ body{
 }
 /* all bg-carousel places in header.jsx*/
 .bg-carousel1 {
-    min-height: 500px;
+    min-height: 400px;
     background-size: cover;
     background-position: center;
-    background-size: 100% 110%;
+    background-size: 100% 100%;
     
     background-image: url(https://t4.ftcdn.net/jpg/04/51/91/07/360_F_451910724_zReyP0xzZQqQEN5aEDusqalwEsOX9HWS.jpg);
 }
 
 .bg-carousel2 {
-    min-height: 500px;
+    min-height: 400px;
     background-size: cover;
-    background-position: center;
+    background-position: top;
 
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
     background-image: url(https://149837734.v2.pressablecdn.com/wp-content/uploads/2022/02/Fast-and-Furious-Movies-in-Order.jpg);
 }
 
 .bg-carousel3 {
-    min-height: 500px;
+    min-height: 400px;
     background-size: cover;
     background-position: center;
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
     background-image: url(https://i.ytimg.com/vi/fEE4RO-_jug/maxresdefault.jpg);
 }
 
 
 .topHome{
-    background-color:#da9c0d;
-    padding: 15px;
+    background-color:#da9d0ddd;
+    
+    /* padding: 15px; */
+}
+
+.topYear{
+    color: #000000;
 }
