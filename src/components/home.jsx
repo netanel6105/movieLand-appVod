@@ -7,7 +7,7 @@ import VodList from '../components/vodList';
 
 const Home = () => {
 
-    const [data, setData] = useState({});
+    const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true)
     const param = useParams()
     console.log(param.search);
@@ -22,7 +22,7 @@ const Home = () => {
             setLoading(false);
         }
         catch (error) {
-            console.log(error.response);
+            console.log(error);
         }
 
     }
