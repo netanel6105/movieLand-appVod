@@ -16,12 +16,6 @@ body{
     background-color: #CE930A;
 }
 
-.top-carousel{
-    overflow: hidden;
-}
-
-
-
 /*in navBar.jsx*/
 .navTop {
     background: rgba(0, 0, 0, 0.807);
@@ -33,19 +27,13 @@ body{
     background-color: #CE930A;
     border-radius: 1%;
     height: 40px;
-
 }
-
 /*in navBar.jsx*/
 .inp-1 {
     border-radius: 1%;
 
     height: 40px;
 }
-
-
-
-
 /* all bg-carousel places in header.jsx*/
 .bg-carousel1 {
     min-height: 500px;
@@ -71,4 +59,10 @@ body{
     background-position: center;
     background-size: 100% 100%;
     background-image: url(https://i.ytimg.com/vi/fEE4RO-_jug/maxresdefault.jpg);
+}
+
+
+.topHome{
+    background-color:#ce930a;
+    padding: 15px;
 }
