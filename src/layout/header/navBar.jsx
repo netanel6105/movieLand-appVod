@@ -10,12 +10,14 @@ const NavBar = () => {
 
     return (
         <div>
-            <div className="navTop container-fluid  p-2">
+            <div className="navTop container-fluid  ">
                 <div className='container-md'>
                     <div className="row ">
 
                         <nav class="navbar navbar-light  justify-content-between">
-                            <Link class="navbar-brand" to={"/"}> <h1  className='nameApp  my-1 p-3' >MovieLand</h1> </Link>
+                            <Link class="navbar-brand col-lg-3 col-md-6 col-12" to={"/"}> 
+                            <h1  className='nameApp   my-1 p-3' >MovieLand</h1> 
+                            </Link>
 
                             <form class="form-inline d-flex ">
                                 <input onKeyDown={(e) => { if (e.key === "Enter")  { nav("/" + inputRef.current.value) }}} ref={inputRef} class="inp-1 form-control appearance-none   mr-sm-2" type="search" placeholder="Search..." aria-label="Search" />

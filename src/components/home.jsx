@@ -10,6 +10,9 @@ const Home = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true)
     const params = useParams()
+
+
+    
     const doApi = async () => {
         try {
             
@@ -47,7 +50,7 @@ const Home = () => {
         }
 
 
-        
+
     useEffect(() => {
         doApi();
     }, [params])

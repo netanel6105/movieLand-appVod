@@ -12,9 +12,12 @@ body{
 .nameApp {
     cursor: pointer;
     /* text-shadow: 2px 2px 4px #000000; */
-    border-radius: 10px;
-    background-color: #CE930A;
+    /* border-radius: 10px;
+    background-color: #CE930A; */
+    color: #CE930A;
+    /* font-family: 'Lobster'; */
     font-family: 'Lobster';
+        font-size: 44px;
 }
 
 /*in navBar.jsx*/
@@ -81,10 +84,12 @@ background-color:  #fcb500dd ;
 .imageList{
    width: 80%;
    height: 100%;
+
 }
 .vod-list{
     display: flex;
     justify-content: space-around;
+    justify-content: center;
 }
 /* .vod-list img{
     
