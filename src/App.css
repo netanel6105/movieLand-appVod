@@ -11,7 +11,7 @@ body{
 /* in navBar.jsx - link h3*/
 .nameApp {
     cursor: pointer;
-    text-shadow: 2px 2px 4px #000000;
+    /* text-shadow: 2px 2px 4px #000000; */
     border-radius: 10px;
     background-color: #CE930A;
     font-family: 'Lobster';
@@ -42,24 +42,25 @@ body{
     background-position: center;
     background-size: 100% 100%;
     
-    background-image: url(https://t4.ftcdn.net/jpg/04/51/91/07/360_F_451910724_zReyP0xzZQqQEN5aEDusqalwEsOX9HWS.jpg);
+    background-image: url(https://earlygame.com/uploads/images/_headerImage/netflix-library-gamer-movies.jpg);
 }
 
 .bg-carousel2 {
     min-height: 425px;
     background-size: cover;
-    background-position: top;
+    background-position:top;
 
-    background-size: 100% 110%;
-    background-image: url(https://earlygame.com/uploads/images/_headerImage/netflix-library-gamer-movies.jpg);
+    background-size: 100% 130%;
+    background-image: url(https://thumbnails.cbsig.net/_x/w1200/CBS_Production_Entertainment_VMS/2021/05/27/1902183491948/13HRS_SAlone_16_9_1920x1080_NB_988230_1920x1080.jpg
+    );
 }
 
 .bg-carousel3 {
     min-height: 425px;
     background-size: cover;
-    background-position: top;
-    /* background-size: 100% 100%; */
-    background-image: url(https://images-na.ssl-images-amazon.com/images/S/pv-target-images/c3a3caa7ca107d60de0dd9100d316f577af10bf7671751c43b55c88292bbd731._UY500_UX667_RI_V_TTW_.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-image: url(https://www.looper.com/img/gallery/puss-in-boots-the-last-wish-trailer-the-journey-of-a-lifetime/l-intro-1668541930.jpg);
 }
 
 
@@ -85,3 +86,11 @@ background-color:  #fcb500dd ;
     display: flex;
     justify-content: space-around;
 }
+.vod-list img{
+    
+}
+
+/* https://thumbnails.cbsig.net/_x/w1200/CBS_Production_Entertainment_VMS/2021/05/27/1902183491948/13HRS_SAlone_16_9_1920x1080_NB_988230_1920x1080.jpg */
+
+
+/* https://earlygame.com/uploads/images/_headerImage/netflix-library-gamer-movies.jpg */
