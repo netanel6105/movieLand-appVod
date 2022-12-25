@@ -9,16 +9,16 @@ const Home = () => {
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true)
-    const param = useParams()
-    console.log(param.search);
+    const params = useParams()
     const doApi = async () => {
         try {
-
+            
             setLoading(true)
-            let url = `http://www.omdbapi.com/?s=${param.search || "bank"}&apikey=c253e9ac`
+            let url = `http://www.omdbapi.com/?s=${params.search || "bank"}&apikey=c253e9ac`
             const { data } = await axios.get(url);
             console.log(data.Search);
             setData(data.Search);
+            console.log(params.search);
             setLoading(false);
         }
         catch (error) {
@@ -26,13 +26,22 @@ const Home = () => {
         }
 
     }
+            // strip year
+        let yearArr = [];
+        const displayYear =()=>{
+            let year = new Date().getFullYear();
+
+            for(let i =0; i< 10; i++){
+                yearArr[i] = year -i*10;
+            }
+        }
 
 
-
+        let yearSelect = 
 
     useEffect(() => {
         doApi();
-    }, [param])
+    }, [params])
 
 
 
