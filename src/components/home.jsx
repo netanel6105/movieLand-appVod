@@ -37,8 +37,17 @@ const Home = () => {
         }
 
 
-        let yearSelect = 
+        let yearSelect = [];
+        const yearSelect1 = () =>{
+            let year = new Date().getFullYear();
 
+            for(let i =0; i <30 ; i++){
+                yearSelect[i] = year-1;
+            }
+        }
+
+
+        
     useEffect(() => {
         doApi();
     }, [params])
@@ -58,11 +67,11 @@ const Home = () => {
                 <div className="container-sm mx-auto">
                     <div className="flex flex-wrap">
                         {data.map((item, i) => {
-                            return <VodList key={i} item={item} />;
+                            return <VodList key={i} item={item} />
                         })}
 
                     </div>
-                </div>
+                </div> 
             }
         </div>
     )
