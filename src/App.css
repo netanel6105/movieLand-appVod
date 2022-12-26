@@ -68,15 +68,9 @@ body{
 
 
 .topHome{
-    /* background-color: #000000;
-    background-image: linear-gradient(0deg, #000000 29%, #977001 97%);
-     */
-    
-    /* padding: 15px; */
 background-color:  #fcb500dd ;
    
 }
-
 .topYear{
     color: #000000;
 }
@@ -91,7 +85,4 @@ background-color:  #fcb500dd ;
     justify-content: space-around;
     justify-content: center;
 }
-/* .vod-list img{
-    
-} */
 
