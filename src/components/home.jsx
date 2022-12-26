@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from "react-router-dom";
 import VodList from '../components/vodList';
+import SelectYear from './selectYear';
 
 const Home = () => {
 
@@ -12,10 +13,10 @@ const Home = () => {
     const params = useParams()
 
 
-    
+
     const doApi = async () => {
         try {
-            
+
             setLoading(true)
             let url = `http://www.omdbapi.com/?s=${params.search || "bank"}&apikey=c253e9ac`
             const { data } = await axios.get(url);
@@ -29,25 +30,26 @@ const Home = () => {
         }
 
     }
-            // strip year
-        let yearArr = [];
-        const displayYear =()=>{
-            let year = new Date().getFullYear();
 
-            for(let i =0; i< 10; i++){
-                yearArr[i] = year -i*10;
-            }
+    // strip year
+    let yearArr = [];
+    const displayYear = () => {
+        let year = new Date().getFullYear();
+
+        for (let i = 0; i < 10; i++) {
+            yearArr[i] = year - i * 10;
         }
+    }
 
-        //selectBox
-        let yearSelect = [];
-        const yearSelect1 = () =>{
-            let year = new Date().getFullYear();
+    //selectBox
+    let yearSelect = [];
+    const yearSelect1 = () => {
+        let year = new Date().getFullYear();
 
-            for(let i =0; i <30 ; i++){
-                yearSelect[i] = year-1;
-            }
+        for (let i = 0; i < 30; i++) {
+            yearSelect[i] = year - 1;
         }
+    }
 
 
 
@@ -70,11 +72,15 @@ const Home = () => {
                 <div className="container-sm mx-auto">
                     <div className="flex flex-wrap">
                         {data.map((item, i) => {
-                            return <VodList key={i} item={item} />
+                            return(
+                                <VodList key={i} item={item} />,
+                                <SelectYear displayYear={displayYear}/>
+                            )
+                            
                         })}
 
                     </div>
-                </div> 
+                </div>
             }
         </div>
     )
