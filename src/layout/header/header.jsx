@@ -1,5 +1,5 @@
 import React from 'react'
-import SelectYear from '../../components/selectYear'
+// import SelectYear from '../../components/selectYear'
 import NavBar from './navBar'
 
 
@@ -41,7 +41,7 @@ const Header = () => {
                 </button>
             </div>
 
-                <SelectYear/>
+                {/* <SelectYear/> */}
 
         </div>
     )
