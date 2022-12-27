@@ -37,6 +37,7 @@ const InfoList = () => {
                     <p>{info.Plot}</p>
                     <p>{info.Title}</p>
                     <p>{info.Writer}</p>
+                    <img src={info.Poster} alt="" />
                 </div>
             }
         </div>

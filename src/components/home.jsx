@@ -12,7 +12,7 @@ const Home = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true)
     const params = useParams()
-    const [years, setYears] = useState('select-year...');
+    const [years, setYears] = useState();
     const selectRef = useRef();
 
 
@@ -21,7 +21,7 @@ const Home = () => {
         try {
 
             setLoading(true)
-            let url = `http://www.omdbapi.com/?s=${params.search || "bank"}&apikey=c253e9ac`
+            let url = `http://www.omdbapi.com/?s=${params.search || "bank"}&y=${years}&apikey=c253e9ac`
             const { data } = await axios.get(url);
             console.log(data.Search);
             setData(data.Search);
@@ -37,7 +37,7 @@ const Home = () => {
     // strip year
     let yearArr = [];
     const displayYear = () => {
-        let year = new Date().getFullYear();
+        let year = new Date().getFullYear() - 2;
 
         for (let i = 0; i < 10; i++) {
             yearArr[i] = year - i * 10;
@@ -52,7 +52,7 @@ const Home = () => {
         let year = new Date().getFullYear();
 
         for (let i = 0; i < 30; i++) {
-            yearSelect[i] = year - 1;
+            yearSelect[i] = year - i;
         }
 
     }
@@ -77,72 +77,51 @@ const Home = () => {
 
             <div className='topHome container-fluid '>
                 <div className="container-md ">
-                    <div className="row col-lg-2 col-md-4 col-4">
-                        <h2 className='topYear mb-2 mt-2 text-[25px]'>Top Yaer :</h2>
-
-                         <select ref={selectRef} onChange={() => {
-                    setYears(selectRef.current.value);
-                }}
-                >
-                    {yearSelect.map((item) => {
-                        return(
-                            // <option value='select-year...'>select-year...</option>,
-                         <option className="bg-black ">{item}</option>
-                         )
-                        })}
-                </select>
-
-                {yearArr.map((item) => {
-                    return (
-                        <button
-                            className="border-t-neutral-50 p-4"
-                            onClick={() => {
-                                setYears(item);
-                            }}
-                        >
-                            {item}
-                        </button>
-                    );
-                })}
 
 
+                    <div className='flex flex-wrap  justify-between justify-items-center  '>
+                        <h2 className='topYear mb-2 mt-2 text-[25px] '>Top Yaer :</h2>
+                        {yearArr.map((item => {
+                            return (
+
+                                <button onClick={() => {
+                                    setYears(item)
+                                }} class="buttYearSt navbar-toggler mt-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon">{item}</span>
+                                </button>
+                            )
+                        }))}
                     </div>
+
+
+
+
+
+                    <div className='p-2 col-8 col-lg-3 col-md-5'>
+
+                        <select ref={selectRef} className="form-select "
+                            onChange={() => {
+                                setYears(selectRef.current.value)
+                            }} >
+
+                                <option>Select Year...</option>
+                            {yearSelect.map((item => {
+                                return (
+
+                                    <option value={item}>{item}</option>
+                                )
+                            }))}
+                        </select>
+                    </div>
+
+
+
+
+
+
+
                 </div>
-
             </div>
-
-
-
-
-{/*                  
-            <div className="mb-4 flex flex-wrap p-4 container mx-auto">
-               
-                <h2 className="p-4 ml-[25px] text-[25px] underline">Top Year:</h2>
-
-                <select ref={selectRef} onChange={() => {
-                    setYears(selectRef.current.value);
-                }}
-                >
-                    {yearSelect.map((item) => {
-                        return <option className="bg-black ">{item}</option>;
-                    })}
-                </select>
-
-                {yearArr.map((item) => {
-                    return (
-                        <button
-                            className="border-t-neutral-50 p-4"
-                            onClick={() => {
-                                setYears(item);
-                            }}
-                        >
-                            {item}
-                        </button>
-                    );
-                })}
-            </div> */}
-
-
 
 
 
