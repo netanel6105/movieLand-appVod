@@ -11,10 +11,10 @@ const Home = () => {
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true)
-    const params = useParams()
     const [years, setYears] = useState();
     const selectRef = useRef();
-
+    
+    const params = useParams()
 
 
     const doApi = async () => {
