@@ -80,6 +80,8 @@ const InfoList = () => {
                                 <button className='btn  btn-light  '  >Back</button>
                                 </div>
 
+                                <p className='text-white m-0 p-3 bg-dar'>@Netanel Haimchayev</p>
+
                             </div>
 
 
