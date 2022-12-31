@@ -4,6 +4,7 @@ import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
+
 const NavBar = () => {
     const inputRef = useRef();
     const nav = useNavigate();
@@ -15,7 +16,7 @@ const NavBar = () => {
                     <div className="row ">
 
                         <nav class="navbar navbar-light  justify-content-between">
-                            <Link class="navbar-brand col-lg-3 col-md-6 col-12" to={"/"}> 
+                            <Link class="navbar-brand col-lg-3 col-md-6 col-12" to={'/'}> 
                             <h1  className='nameApp   my-1 p-3' >MovieLand</h1> 
                             </Link>
 

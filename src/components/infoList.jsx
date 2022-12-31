@@ -2,16 +2,18 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';     
 
 const InfoList = () => {
 
     const [info, setInfo] = useState([])
     const [loading, setLoading] = useState(true)
-    const param = useParams()
+    const params = useParams()
+    const nav = useNavigate();
 
     const doApiInfo = async () => {
         setLoading(true)
-        let url = `http://www.omdbapi.com/?i=${param.id}&apikey=c253e9ac`
+        let url = `http://www.omdbapi.com/?i=${params.id}&apikey=c253e9ac`
         const { data } = await axios.get(url)
         console.log(data);
         setInfo(data);
@@ -31,12 +33,12 @@ const InfoList = () => {
         <div>
             {loading ? <h1>Loading...</h1> :
                 <div className='container-fluid'>
-                    <div className="container  mt-5">
+                    <div className="container   mt-5">
 
                         <div className="row mx-auto mt-2 justify-center">
 
-                            <div className='col-md-4 pt-4 mb-3 '>
-                                <img src={info.Poster} alt="" className='width="350"' />
+                            <div className='col-md-4  pt-4 mb-3 shadow '>
+                                <img src={info.Poster} alt="" className='width="350" ' />
                             </div>
 
                             <div className=' col-md-7 pt-4 mb-4 mt-2 text-md-start text-center text-white'>
@@ -48,7 +50,7 @@ const InfoList = () => {
 
                             
 
-                                <div className='d-flex mt-3 justify-center'>
+                                <div className='d-flex mt-3'>
 
                                    
 
@@ -83,7 +85,9 @@ const InfoList = () => {
 
 
                                 <div className='mt-3'>
-                                <button className='btn  btn-light  '  >Back</button>
+                                <button onClick={() =>{
+                                    nav(-1)
+                                }} className='btn  btn-light  '  >Back</button>
                                 </div>
 
 
