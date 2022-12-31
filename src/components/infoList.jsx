@@ -19,6 +19,9 @@ const InfoList = () => {
     }
 
 
+    
+
+
 
     useEffect(() => {
         doApiInfo()
@@ -30,9 +33,9 @@ const InfoList = () => {
                 <div className='container-fluid'>
                     <div className="container  mt-5">
 
-                        <div className="row mx-auto mt-2 ">
+                        <div className="row mx-auto mt-2 justify-center">
 
-                            <div className='col-md-5 pt-4 mb-3  text-center'>
+                            <div className='col-md-4 pt-4 mb-3 '>
                                 <img src={info.Poster} alt="" className='width="350"' />
                             </div>
 
@@ -45,7 +48,10 @@ const InfoList = () => {
 
                             
 
-                                <div className='d-flex info_stars'>
+                                <div className='d-flex mt-3 justify-center'>
+
+                                   
+
                                     <div className='text-white '>
                                             <img width="22" src="../image/star.png" alt="" />
                                     </div>
@@ -71,16 +77,15 @@ const InfoList = () => {
                                             <img width="22" src="../image/star.png" alt="" />
                                     </div>
                                     <div className='text-white '>
-                                            <img width="22" src="../image/star.png" alt="" />
+                                            <img width="22" src="../image/half_star.png" alt="" />
                                     </div>
                                 </div>
 
-                                <div className='mt-3'>
 
+                                <div className='mt-3'>
                                 <button className='btn  btn-light  '  >Back</button>
                                 </div>
 
-                                <p className='text-white m-0 p-3 bg-dar'>@Netanel Haimchayev</p>
 
                             </div>
 
@@ -90,6 +95,7 @@ const InfoList = () => {
                     </div>
                 </div>
             }
+            <p className='text-white m-0 p-3 bg-dar text-center'>@Netanel Haimchayev</p>
         </div>
     )
 }
