@@ -41,7 +41,7 @@ const InfoList = () => {
                                 <img src={info.Poster} alt="" className='width="350" ' />
                             </div>
 
-                            <div className=' col-md-7 pt-4 mb-4 mt-2 text-md-start text-center text-white'>
+                            <div className=' col-md-7 pt-4 mb-5  text-md-start text-center text-white'>
 
                                 <h2 className='font-bold mt-2'>{info.Title}</h2>
                                 <p className='mt-2'>{info.Plot}</p>
@@ -110,13 +110,3 @@ export default InfoList
 
 
 
-                    // < p > { info.Actors }</p >
-                    // <p>{info.Country}</p>
-                    // <p>{info.DVD}</p>
-                    // <p>{info.Director}</p>
-                    // <p>{info.Genre}</p>
-                    // <p>{info.Language}</p>
-                    // <p>{info.Plot}</p>
-                    // <p>{info.Title}</p>
-                    // <p>{info.Writer}</p>
-                    // <img src={info.Poster} alt="" />

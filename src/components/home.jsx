@@ -99,7 +99,7 @@ const Home = () => {
 
                     <div className='p-2 col-8 col-lg-3 col-md-5'>
 
-                        <select ref={selectRef} className="form-select "
+                        <select ref={selectRef} className="form form-select  text-center fs-4"
                             onChange={() => {
                                 setYears(selectRef.current.value)
                             }} >
