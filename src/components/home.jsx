@@ -37,9 +37,9 @@ const Home = () => {
     // strip year
     let yearArr = [];
     const displayYear = () => {
-        let year = new Date().getFullYear() - 2;
+        let year = new Date().getFullYear() - 3;
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 7; i++) {
             yearArr[i] = year - i * 10;
         }
     }
