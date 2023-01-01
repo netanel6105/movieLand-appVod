@@ -110,15 +110,17 @@ button:hover{
     color: #CE930A;
 }
 
+
+
 .animate-charcter
 {
-   text-transform: uppercase;
+   /* text-transform: uppercase; */
   background-image: linear-gradient(
     -225deg,
-    #231557 0%,
-    #44107a 29%,
+    #CE930A 0%,
+    #CE930A 29%,
     #ff1361 67%,
-    #fff800 100%
+    #CE930A 100%
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -142,3 +144,27 @@ button:hover{
   
 }
 
+
+@media only screen and (max-width: 280px) {
+    .animate-charcter{
+        font-size: 25px;
+        font-weight: 900;
+    }
+  }
+
+
+@media only screen and (max-width:350px) {
+    .bg-carousel1{
+       min-height: 200px;
+    }
+  }
+@media only screen and (max-width: 350px) {
+    .bg-carousel2{
+       min-height: 200px;
+    }
+  }
+@media only screen and (max-width: 350px) {
+    .bg-carousel3{
+       min-height: 200px;
+    }
+  }
