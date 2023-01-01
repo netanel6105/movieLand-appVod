@@ -82,27 +82,36 @@ const Home = () => {
                 <div className="container-md ">
 
 
-                    
-                    <nav class="navbar navbar-expand-lg navbar-light ">
-                                <Link class="navbar-brand" href="#">Navbar</Link>
-                               
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                {yearArr.map((item =>{
-                                    
-                                    <button onClick={() => {
-                                        setYears(item)
-                                    }} class="buttYearSt navbar-toggler mt-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon">{item}</span>
-                                    </button>
-                                }))}
-                                
-                            </div>
+                    {/* <nav className='navbar navbar-expand-lg navbar-dark'>
+                        <div className="container">
+                            <span className='navbar-brand'>
+                                <Link className='topYear mb-2 mt-2 text-[25px]' to={'#'}>Top Yaer :</Link>
+                            </span>
+
+                            <button className='navbar-toggler collapsed bg-dark' aria-controls="basic-navbar-nav" type="button" 
+                            aria-label="Toggle navigation">
+                                    <span className='navbar-toggler-icon'></span>
+                           </button>
+
+
+                           <div className='navbar-collapse collapse show' id="basic-navbar-nav">
+                                    <div className='me-auto navbar-nav'>
+                                        {yearArr.map((item =>{
+                                            return(
+                                             <button onClick={()=>{
+                                                setYears(item)
+                                            }}>
+                                               {item}
+                                                
+                                             </button>
+                                            )
+                                        }))}
+                                    </div>
+                           </div>
                         </div>
-                    </nav>
+
+
+                    </nav> */}
 
 
 
@@ -140,23 +149,23 @@ const Home = () => {
 
 
 
-
-            {loading ? <h1>Loading...</h1> :
+            {data ? ( <div> 
+                
+                {loading ? <h1 className='foundCss text-danger font-black text-center mt-2'>Loading...</h1> :
 
                 <div className="container-sm mx-auto">
                     <div className="flex flex-wrap">
                         {data.map((item, i) => {
                             return (
                                 <VodList key={i} item={item} />
-
-
-                            )
-
-                        })}
-
+                                )
+                            })}
                     </div>
-                </div>
-            }
+                </div>} 
+                
+                
+                </div> ) : (<h1 className='foundCss text-danger font-black text-center mt-2'>Movie not Found</h1>)}
+
         </div>
     )
 }
@@ -186,3 +195,6 @@ export default Home
                             )
                         }))}
                     </div> */}
+
+
+                    // flex flex-wrap justify-between justify-items-center 
