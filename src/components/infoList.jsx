@@ -31,7 +31,7 @@ const InfoList = () => {
 
     return (
         <div>
-            {loading ? <h1>Loading...</h1> :
+            {loading ? <h1 className='foundCss text-danger font-black text-center mt-2'>Loading...</h1> :
                 <div className='container-fluid'>
                     <div className="container   mt-5">
 
