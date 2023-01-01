@@ -7,6 +7,7 @@ import VodList from '../components/vodList';
 import { useRef } from "react";
 
 
+
 const Home = () => {
 
     const [data, setData] = useState([]);
@@ -165,10 +166,10 @@ const Home = () => {
                 
                 
                 </div> ) : (<h1 className='foundCss text-danger font-black text-center mt-2'>Movie not Found</h1>)}
-
         </div>
     )
 }
+
 
 export default Home
 

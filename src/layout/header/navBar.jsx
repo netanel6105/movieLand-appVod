@@ -17,7 +17,7 @@ const NavBar = () => {
 
                         <nav class="navbar navbar-light  justify-content-between">
                             <Link class="navbar-brand col-lg-3 col-md-6 col-12" to={'/'}> 
-                            <h1  className='nameApp  my-1 p-3' >MovieLand</h1> 
+                            <h1  className='animate-charcter  my-1 p-3' >MovieLand</h1> 
                             </Link>
 
                             <form class="form-inline d-flex">
