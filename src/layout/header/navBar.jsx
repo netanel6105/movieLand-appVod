@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const NavBar = () => {
-    const inputRef = useRef();
+    const inputRef = useRef(); 
     const nav = useNavigate();
 
     return (

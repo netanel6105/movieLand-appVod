@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import VodList from '../components/vodList';
 import { useRef } from "react";
 
@@ -13,7 +13,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true)
     const [years, setYears] = useState();
     const selectRef = useRef();
-    
+
     const params = useParams()
 
 
@@ -33,6 +33,8 @@ const Home = () => {
         }
 
     }
+
+
 
     // strip year
     let yearArr = [];
@@ -60,6 +62,7 @@ const Home = () => {
 
 
 
+
     useEffect(() => {
         doApi();
     }, [params, years])
@@ -79,19 +82,31 @@ const Home = () => {
                 <div className="container-md ">
 
 
-                    <div className='flex flex-wrap  justify-between justify-items-center  '>
-                        <h2 className='topYear mb-2 mt-2 text-[25px] '>Top Yaer :</h2>
-                        {yearArr.map((item => {
-                            return (
+                    
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                                <Link class="navbar-brand" href="#">Navbar</Link>
+                               
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                {yearArr.map((item =>{
+                                    
+                                    <button onClick={() => {
+                                        setYears(item)
+                                    }} class="buttYearSt navbar-toggler mt-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon">{item}</span>
+                                    </button>
+                                }))}
+                                
+                            </div>
+                        </div>
+                    </nav>
 
-                                <button onClick={() => {
-                                    setYears(item)
-                                }} class="buttYearSt navbar-toggler mt-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon">{item}</span>
-                                </button>
-                            )
-                        }))}
-                    </div>
+
+
+
 
 
 
@@ -104,7 +119,7 @@ const Home = () => {
                                 setYears(selectRef.current.value)
                             }} >
 
-                                <option>Select Year...</option>
+                            <option>Select Year...</option>
                             {yearSelect.map((item => {
                                 return (
 
@@ -147,3 +162,27 @@ const Home = () => {
 }
 
 export default Home
+
+
+
+
+
+
+
+
+
+
+
+{/* <div className='flex flex-wrap  justify-between justify-items-center  '>
+                        <h2 className='topYear mb-2 mt-2 text-[25px] '>Top Yaer :</h2>
+                        {yearArr.map((item => {
+                            return (
+
+                                <button onClick={() => {
+                                    setYears(item)
+                                }} class="buttYearSt navbar-toggler mt-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon">{item}</span>
+                                </button>
+                            )
+                        }))}
+                    </div> */}
