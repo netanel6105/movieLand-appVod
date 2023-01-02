@@ -165,7 +165,7 @@ const Home = () => {
                 </div>} 
                 
                 
-                </div> ) : (<h1 className='foundCss text-danger font-black text-center mt-2'>Movie not Found go fuck your self</h1>)}
+                </div> ) : (<h1 className='foundCss text-danger font-black text-center mt-2'>Movie not Found </h1>)}
         </div>
     )
 }
