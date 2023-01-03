@@ -9,10 +9,7 @@ function App() {
    
     <div>
      <AppRouters/>
-     {/* <VodInput/>
-     <VodStrip/>
-     <VodList/>
-     <Footer/> */}
+     
     </div>
   );
 }

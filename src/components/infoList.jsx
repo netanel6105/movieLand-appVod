@@ -10,6 +10,7 @@ const InfoList = () => {
     const [loading, setLoading] = useState(true)
     const params = useParams()
     const nav = useNavigate();
+    
 
     const doApiInfo = async () => {
         setLoading(true)
