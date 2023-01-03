@@ -29,6 +29,12 @@ const InfoList = () => {
         doApiInfo()
     }, [])
 
+
+
+
+
+
+
     return (
         <div>
             {loading ? <h1 className='foundCss text-danger font-black text-center mt-2'>Loading...</h1> :
@@ -99,7 +105,7 @@ const InfoList = () => {
                     </div>
                 </div>
             }
-            {/* <p className='text-white m-0 p-3 bg-dar text-center'>@Netanel Haimchayev</p> */}
+         
         </div>
     )
 }
