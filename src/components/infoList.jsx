@@ -57,7 +57,7 @@ const InfoList = () => {
 
                             
 
-                                <div className='d-flex mt-3'>
+                                <div className='d-flex mt-3 '>
 
                                    
 
