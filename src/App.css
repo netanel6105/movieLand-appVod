@@ -116,8 +116,15 @@ button:hover{
 .size-font{
     font-size:larger;
     font-weight: 400;   
+    
 }
 
+.size-font1{
+   color: rgba(255, 0, 0, 0.852);
+   font-size: 25px;
+    font-weight: 900;
+
+}
 
 
 

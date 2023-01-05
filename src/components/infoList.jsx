@@ -46,7 +46,7 @@ const InfoList = () => {
 
                             <div className=' col-md-7 pt-4 mb-5  text-md-start text-center text-white'>
 
-                                <h2 className='size-font font-bold mt-2'>{info.Title}</h2>
+                                <h2 className='size-font1 font-bold mt-2'>{info.Title}</h2>
                                 <p className='size-font mt-2'>{info.Plot}</p>
                                 <h6 className='size-font mt-4'>Gener : {info.Genre}</h6>
                                 <p className='size-font mt-2'>Actors : {info.Actors}</p >
