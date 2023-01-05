@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import VodList from '../components/vodList';
 import { useRef } from "react";
 
@@ -51,7 +51,7 @@ const Home = () => {
 
 
 
-    
+
     //selectBox
     let yearSelect = [];
     const yearSelect1 = () => {
@@ -85,46 +85,22 @@ const Home = () => {
             <div className='topHome container-fluid '>
                 <div className="container-md ">
 
+                    
+                            {/* <div className='mx-auto navbar-nav'>
+                                {yearArr.map((item => {
+                                    return (
+                                        <button onClick={() => {
+                                            setYears(item)
+                                        }}>
+                                            {item}
 
-                    {/* <nav className='navbar navbar-expand-lg navbar-dark'>
-                        <div className="container">
-                            <span className='navbar-brand'>
-                                <Link className='topYear mb-2 mt-2 text-[25px]' to={'#'}>Top Yaer :</Link>
-                            </span>
+                                        </button>
+                                    )
+                                }))}
+                            </div> */}
+                    
 
-                            <button className='navbar-toggler collapsed bg-dark' aria-controls="basic-navbar-nav" type="button" 
-                            aria-label="Toggle navigation">
-                                    <span className='navbar-toggler-icon'></span>
-                           </button>
-
-
-                           <div className='navbar-collapse collapse show' id="basic-navbar-nav">
-                                    <div className='me-auto navbar-nav'>
-                                        {yearArr.map((item =>{
-                                            return(
-                                             <button onClick={()=>{
-                                                setYears(item)
-                                            }}>
-                                               {item}
-                                                
-                                             </button>
-                                            )
-                                        }))}
-                                    </div>
-                           </div>
-                        </div>
-
-
-                    </nav> */}
-
-
-
-
-
-
-
-
-
+                    {/* select-box */}
                     <div className='p-2 col-8 col-lg-3 col-md-5'>
 
                         <select ref={selectRef} className="form form-select  text-center fs-4"
@@ -145,9 +121,6 @@ const Home = () => {
 
 
 
-
-
-
                 </div>
             </div>
 
@@ -155,22 +128,22 @@ const Home = () => {
 
 
 
-            {data ? ( <div> 
-                
+            {data ? (<div>
+
                 {loading ? <h1 className='foundCss text-danger font-black text-center mt-2'>Loading...</h1> :
 
-                <div className="container-sm mx-auto">
-                    <div className="flex flex-wrap">
-                        {data.map((item, i) => {
-                            return (
-                                <VodList key={i} item={item} />
+                    <div className="container-sm mx-auto">
+                        <div className="flex flex-wrap">
+                            {data.map((item, i) => {
+                                return (
+                                    <VodList key={i} item={item} />
                                 )
                             })}
-                    </div>
-                </div>} 
-                
-                
-                </div> ) : (<h1 className='foundCss text-danger font-black text-center mt-2'>Movie not Found </h1>)}
+                        </div>
+                    </div>}
+
+
+            </div>) : (<h1 className='foundCss text-danger font-black text-center mt-2'>Movie not Found </h1>)}
         </div>
     )
 }
