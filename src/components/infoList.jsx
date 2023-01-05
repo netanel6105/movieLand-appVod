@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';     
+import { useNavigate } from 'react-router-dom';
 
 const InfoList = () => {
 
@@ -10,7 +10,7 @@ const InfoList = () => {
     const [loading, setLoading] = useState(true)
     const params = useParams()
     const nav = useNavigate();
-    
+
 
     const doApiInfo = async () => {
         setLoading(true)
@@ -22,15 +22,11 @@ const InfoList = () => {
     }
 
 
-    
-
 
 
     useEffect(() => {
         doApiInfo()
     }, [])
-
-
 
 
 
@@ -55,46 +51,46 @@ const InfoList = () => {
                                 <h6 className='mt-2'>Gener : {info.Genre}</h6>
                                 <p className='mt-2'>Actors : {info.Actors}</p >
 
-                            
+
 
                                 <div className='d-flex mt-3 '>
 
-                                   
+
 
                                     <div className='text-white '>
-                                            <img width="22" src="../image/star.png" alt="" />
+                                        <img width="22" src="../image/star.png" alt="" />
                                     </div>
                                     <div className='text-white '>
-                                            <img width="22" src="../image/star.png" alt="" />
+                                        <img width="22" src="../image/star.png" alt="" />
                                     </div>
                                     <div className='text-white '>
-                                            <img width="22" src="../image/star.png" alt="" />
+                                        <img width="22" src="../image/star.png" alt="" />
                                     </div>
                                     <div className='text-white '>
-                                            <img width="22" src="../image/star.png" alt="" />
+                                        <img width="22" src="../image/star.png" alt="" />
                                     </div>
                                     <div className='text-white '>
-                                            <img width="22" src="../image/star.png" alt="" />
+                                        <img width="22" src="../image/star.png" alt="" />
                                     </div>
                                     <div className='text-white '>
-                                            <img width="22" src="../image/star.png" alt="" />
+                                        <img width="22" src="../image/star.png" alt="" />
                                     </div>
                                     <div className='text-white '>
-                                            <img width="22" src="../image/star.png" alt="" />
+                                        <img width="22" src="../image/star.png" alt="" />
                                     </div>
                                     <div className='text-white '>
-                                            <img width="22" src="../image/star.png" alt="" />
+                                        <img width="22" src="../image/star.png" alt="" />
                                     </div>
                                     <div className='text-white '>
-                                            <img width="22" src="../image/half_star.png" alt="" />
+                                        <img width="22" src="../image/half_star.png" alt="" />
                                     </div>
                                 </div>
 
 
                                 <div className='mt-3'>
-                                <button onClick={() =>{
-                                    nav(-1)
-                                }} className='btn  btn-light  '  >Back</button>
+                                    <button onClick={() => {
+                                        nav(-1)
+                                    }} className='btn  btn-light  '  >Back</button>
                                 </div>
 
 
@@ -106,7 +102,7 @@ const InfoList = () => {
                     </div>
                 </div>
             }
-         
+
         </div>
     )
 }
