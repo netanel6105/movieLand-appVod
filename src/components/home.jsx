@@ -85,8 +85,8 @@ const Home = () => {
             <div className='topHome container-fluid '>
                 <div className="container-md ">
 
-                    
-                            {/* <div className='mx-auto navbar-nav'>
+
+                    {/* <div className='mx-auto navbar-nav'>
                                 {yearArr.map((item => {
                                     return (
                                         <button onClick={() => {
@@ -98,7 +98,7 @@ const Home = () => {
                                     )
                                 }))}
                             </div> */}
-                    
+
 
                     {/* select-box */}
                     <div className='p-2 col-8 col-lg-3 col-md-5'>
