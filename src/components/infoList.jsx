@@ -40,20 +40,24 @@ const InfoList = () => {
 
                         <div className="row mx-auto mt-2 justify-center">
 
-                            <div className='col-md-4  pt-4 mb-3 shadow '>
+                            <div className='imgVodList col-md-4  pt-4 mb-3 shadow '>
                                 <img src={info.Poster} alt="" className='width="350" ' />
                             </div>
 
                             <div className=' col-md-7 pt-4 mb-5  text-md-start text-center text-white'>
 
-                                <h2 className='font-bold mt-2'>{info.Title}</h2>
-                                <p className='mt-2'>{info.Plot}</p>
-                                <h6 className='mt-2'>Gener : {info.Genre}</h6>
-                                <p className='mt-2'>Actors : {info.Actors}</p >
+                                <h2 className='size-font font-bold mt-2'>{info.Title}</h2>
+                                <p className='size-font mt-2'>{info.Plot}</p>
+                                <h6 className='size-font mt-4'>Gener : {info.Genre}</h6>
+                                <p className='size-font mt-2'>Actors : {info.Actors}</p >
+                                <p className= 'size-font mt-4'>Language : {info.Language}</p >
+                                <p className='size-font mt-2'>Year : {info.Year}</p >
 
 
 
-                                <div className='d-flex mt-3 '>
+
+
+                                <div className='stars d-flex mt-3 '>
 
 
 

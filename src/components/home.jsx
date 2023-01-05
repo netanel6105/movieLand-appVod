@@ -188,19 +188,3 @@ export default Home
 
 
 
-{/* <div className='flex flex-wrap  justify-between justify-items-center  '>
-                        <h2 className='topYear mb-2 mt-2 text-[25px] '>Top Yaer :</h2>
-                        {yearArr.map((item => {
-                            return (
-
-                                <button onClick={() => {
-                                    setYears(item)
-                                }} class="buttYearSt navbar-toggler mt-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon">{item}</span>
-                                </button>
-                            )
-                        }))}
-                    </div> */}
-
-
-                    // flex flex-wrap justify-between justify-items-center 
