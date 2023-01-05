@@ -14,7 +14,7 @@ const InfoList = () => {
 
     const doApiInfo = async () => {
         setLoading(true)
-        let url = `https://www.omdbapi.com/?i=${params.id}&apikey=c253e9ac`
+        let url = `http://www.omdbapi.com/?i=${params.id}&apikey=c253e9ac`
         const { data } = await axios.get(url)
         console.log(data);
         setInfo(data);
