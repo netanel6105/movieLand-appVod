@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import VodList from '../components/vodList';
 import { useRef } from "react";
 
@@ -14,8 +14,8 @@ const Home = () => {
     const [loading, setLoading] = useState(true)
     const [years, setYears] = useState();
     const selectRef = useRef();
-
     const params = useParams()
+
 
 
     const doApi = async () => {
@@ -37,16 +37,16 @@ const Home = () => {
 
 
 
-    // strip year
-    let yearArr = [];
-    const displayYear = () => {
-        let year = new Date().getFullYear() - 3;
+    // // strip year
+    // let yearArr = [];
+    // const displayYear = () => {
+    //     let year = new Date().getFullYear() - 3;
 
-        for (let i = 0; i < 7; i++) {
-            yearArr[i] = year - i * 10;
-        }
-    }
-    displayYear()
+    //     for (let i = 0; i < 7; i++) {
+    //         yearArr[i] = year - i * 10;
+    //     }
+    // }
+    // displayYear()
 
 
 
@@ -150,6 +150,8 @@ const Home = () => {
 
                 </div>
             </div>
+
+
 
 
 
