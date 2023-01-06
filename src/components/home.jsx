@@ -22,7 +22,7 @@ const Home = () => {
         try {
 
             setLoading(true)
-            let url = `http://www.omdbapi.com/?s=${params.search || "bank"}&y=${years}&apikey=c253e9ac`
+            let url = `https://www.omdbapi.com/?s=${params.search || "bank"}&y=${years}&apikey=c253e9ac`
             const { data } = await axios.get(url);
             console.log(data.Search);
             setData(data.Search);
