@@ -1,11 +1,12 @@
 
 import './App.css';
+import TestGraph from './comps/testGraph';
 
 function App() {
   return (
    
-    <div>
-      
+    <div className='App'>
+      <TestGraph/>
     </div>
   );
 }
