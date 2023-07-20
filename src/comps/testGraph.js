@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import CanvasJSReact from '../graph_lib/canvasjs.react';
 import axios from "axios"
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
 export default function TestGraph() {
+
+  const [ar,setAr] = useState([])
 
   useEffect(() => {
     
@@ -14,16 +16,21 @@ export default function TestGraph() {
   const doApi = async() => {
     let url = "https://coronavirus-19-api.herokuapp.com/countries";
     const resp = await axios.get(url);
-    console.log(resp.data)
+    const countries_ar = ["USA" , "Spain" , "Brazil" , "UK", "France"];
+    let temp_ar = resp.data.filter(item => { return countries_ar.includes(item.country) })
+    console.log(temp_ar);
+
+    let graph_ar = temp_ar.map(item =>{
+      let obj = {
+        label:item.country,
+        y:item.PerOneMillion
+      }
+      return obj;
+    })
+    setAr(graph_ar)
   }
 
-  const ar = [
-    { label:"Jerusalem" , y:900},
-    { label:"Tel aviv" , y:800},
-    { label:"Ramat gan" , y:700},
-    {label:"Netanya" , y:750}
-  ]
-  
+
   const options = {
     animationEnabled: true,
     exportEnabled: true,
