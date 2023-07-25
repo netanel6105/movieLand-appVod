@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Products.css"
 
-const Products = () => {
+const Products = ({ result }) => {
   return (
-    <section className="card-container">vdsv</section>
+    <section className="card-container">{result}</section>
   )
 }
 
